@@ -14,8 +14,6 @@ services:
       - SECRET_KEY=your-secret-key-here
       - ALLOWED_HOSTS=localhost,127.0.0.1,fluencymodeltest.rnd.parel.co
       - DJANGO_SETTINGS_MODULE=stuttersense_v1.settings
-    depends_on:
-      - nginx
 
   nginx:
     image: nginx:1.25-alpine
