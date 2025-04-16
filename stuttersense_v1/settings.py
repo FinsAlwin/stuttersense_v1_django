@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'corsheaders',
     'auth_app',
     'speech',
-    'sslserver',
 ]
 
 
