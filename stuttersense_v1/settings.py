@@ -131,9 +131,20 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/home/ubuntu/stuttersense_v1_django/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+TEMP_ROOT = os.path.join(MEDIA_ROOT, 'temp')
 
+# Create directories if they don't exist
+os.makedirs(os.path.join(BASE_DIR, 'static'), exist_ok=True)
+os.makedirs(MEDIA_ROOT, exist_ok=True)
+os.makedirs(TEMP_ROOT, exist_ok=True)
+os.makedirs(os.path.join(MEDIA_ROOT, 'audio_files'), exist_ok=True)
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
@@ -165,11 +176,7 @@ SIMPLE_JWT = {
     'TOKEN_TYPE_CLAIM': 'token_type',
 }
 
-# Make sure media files are being served in development
-if DEBUG:
-    STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, 'static'),
-    ]
+
 
 # CORS settings
 CORS_ALLOW_ALL_ORIGINS = False  # Don't allow all origins for security
