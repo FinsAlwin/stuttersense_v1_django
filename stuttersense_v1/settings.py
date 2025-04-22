@@ -131,13 +131,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 TEMP_ROOT = os.path.join(MEDIA_ROOT, 'temp')
 
 
-STATIC_ROOT = '/home/ubuntu/stuttersense_v1_django/static/'
+# STATIC_ROOT = '/home/ubuntu/stuttersense_v1_django/static/'
 
 # Create directories if they don't exist
 os.makedirs(os.path.join(BASE_DIR, 'static'), exist_ok=True)
