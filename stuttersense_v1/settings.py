@@ -133,7 +133,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = '/home/ubuntu/stuttersense_v1_django/static/'
 STATICFILES_DIRS = [
-    '/home/ubuntu/stuttersense_v1_django/stuttersense_v1_django/static/',
+    os.path.join(BASE_DIR, 'static'),
 ]
 
 
@@ -167,11 +167,6 @@ SIMPLE_JWT = {
     'TOKEN_TYPE_CLAIM': 'token_type',
 }
 
-# Make sure media files are being served in development
-if DEBUG:
-    STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, 'static'),
-    ]
 
 # CORS settings
 CORS_ALLOW_ALL_ORIGINS = False  # Don't allow all origins for security
