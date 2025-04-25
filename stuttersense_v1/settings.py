@@ -176,7 +176,7 @@ SIMPLE_JWT = {
     'TOKEN_TYPE_CLAIM': 'token_type',
 }
 
-CSRF_TRUSTED_ORIGINS = ["https://apistuttersense.rnd.parel.co"]
+# CSRF_TRUSTED_ORIGINS = ["https://apistuttersense.rnd.parel.co"]
 
 # CORS settings
 CORS_ALLOW_ALL_ORIGINS = False  # Don't allow all origins for security
