@@ -176,7 +176,7 @@ SIMPLE_JWT = {
     'TOKEN_TYPE_CLAIM': 'token_type',
 }
 
-# CSRF_TRUSTED_ORIGINS = ["https://apistuttersense.rnd.parel.co"]
+CSRF_TRUSTED_ORIGINS = ["https://apistuttersense.rnd.parel.co"]
 
 # CORS settings
 CORS_ALLOW_ALL_ORIGINS = False  # Don't allow all origins for security
@@ -239,7 +239,7 @@ LOGGING = {
 }
 
 # Add these SSL settings
-SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = False
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = False
